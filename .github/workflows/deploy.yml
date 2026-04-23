@@ -77,9 +77,9 @@ jobs:
       - name: Cache SonarCloud packages
         uses: actions/cache@v3
         with:
-        path: ~/.sonar/cache
-        key: ${{ runner.os }}-sonar
-        restore-keys: ${{ runner.os }}-sonar
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
 
       - name: Run SonarCloud Scan
         env:
