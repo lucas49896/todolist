@@ -82,7 +82,7 @@ jobs:
       restore-keys: ${{ runner.os }}-sonar
 
     - name: Run SonarCloud Scan
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: |
           npx sonarqube-scanner
